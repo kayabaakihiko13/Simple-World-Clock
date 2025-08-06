@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple World Clock</title>
-    <!-- <style src="style.css"></style> -->
-    <link rel="stylesheet" href="style.css">
-    <title> Digital Clock</title>
-    <span class="icon"></span>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-    
-        <div class="header">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-        </div>
+  <div class="container">
+    <h1 style="color:white;">Digital Clock</h1>
+    <h2 id="clock"></h2>
 
-        <h1 id="clock" style="text-align: center;"></h1>
-    
-    </div>
-    <script src="scirpt.js"></script>
+    <label for="timezone" style="color:white;">Select Time Zone:</label>
+    <select id="timezone">
+      <option value="local">System</option>
+      <option value="Europe/London">London (GMT)</option>
+      <option value="Asia/Tokyo">Tokyo (JST)</option>
+      <option value="Europe/Moscow">Moscow (MSK)</option>
+    </select>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
