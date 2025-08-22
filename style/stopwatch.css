@@ -46,10 +46,39 @@ body{
     color: white;
 }
 
-#display{
-    font-size: 50px;
+#display {
+    font-size: 4em;
+    font-family: 'Orbitron', sans-serif;
+    color: #0000FF;
+    
+    /* Hilangkan kotak hitam solid */
+    background: rgba(0, 0, 0, 0.20); /* sangat samar */
+    padding: 10px 25px;
+    border-radius: 12px;
+    display: inline-block;
     margin-bottom: 30px;
-    color: white;
+
+    /* Glow lebih lembut */
+    text-shadow: 
+        0 0 6px rgba(0, 0, 255, 0.8),
+        0 0 15px rgba(0, 0, 255, 0.6),
+        0 0 25px rgba(0, 0, 255, 0.4);
+
+    /* Blur halus */
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.15); /* efek natural */
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+    #display {
+        font-size: 3em;
+        background: rgba(0, 0, 0, 0.1); /* lebih samar di HP */
+        text-shadow: 
+            0 0 10px rgba(0, 0, 255, 0.8),
+            0 0 20px rgba(0, 0, 255, 0.6),
+            0 0 35px rgba(0, 0, 255, 0.4);
+    }
 }
 
 .buttons {
