@@ -5,6 +5,7 @@ body{
     height: 100vh;
     background-color: #121212;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 
@@ -39,3 +40,34 @@ select {
 .container label{
     color: grey;
 }
+.container #timezone{
+    background-color: grey;
+}
+
+/* Header Section */
+.header {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #222;
+      padding: 15px;
+      position: fixed; /* selalu nempel di atas */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* biar nggak ketutup konten lain */
+}
+
+.header a {
+      color: white;
+      text-decoration: none;     /* hilangkan underline */
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+}
+
+.header a:hover{
+    color:grey;
+    transform: scale(1.1);
+}
+

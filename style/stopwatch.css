@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Header Section */
+
+.header{
+    display: flex;
+    justify-content: center;
+    gap:60px;
+    background: #222;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.header a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+
+}
+
+.header a:hover{
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* main Container */
+.container{
+    text-align: center;
+    margin-top: 150px;
+}
+.container h1{
+    color: white;
+}
+
+#display{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* jarak antar tombol */
+}
+
+.buttons button {
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: white;
+}
+
+/* Tombol Start */
+.buttons button:nth-child(1) {
+  background: #28a745; /* hijau */
+}
+
+.buttons button:nth-child(1):hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* Tombol Stop */
+.buttons button:nth-child(2) {
+  background: #dc3545; /* merah */
+}
+
+.buttons button:nth-child(2):hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Tombol Reset */
+.buttons button:nth-child(3) {
+  background: #6c757d; /* abu-abu */
+}
+
+.buttons button:nth-child(3):hover {
+  background: #5a6268;
+  transform: scale(1.05);
+}
+
+
+/* time section */
+.time {
+      font-size: 4rem;
+      color: #0000FF; /* hijau neon */
+      background: #111;
+      padding: 20px 40px;
+      border-radius: 10px;
+      letter-spacing: 5px;
+      text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 40px #0000FF;
+}

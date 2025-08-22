@@ -4,13 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Clock</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style/index.css" />
 </head>
 <body>
+
+  <div class="header">
+      <a href="index.html">🌍 World Clock</a>
+      <a href="stopwatch.html">⏱️ Stopwatch</a>
+  </div>
+
   <div class="container">
     <h1 style="color:white;">Digital Clock</h1>
     <h2 id="clock"></h2>
-
     <label for="timezone" style="color:white;">Select Time Zone:</label>
     <select id="timezone">
       <option value="local">System</option>
@@ -20,6 +25,6 @@
     </select>
   </div>
 
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
