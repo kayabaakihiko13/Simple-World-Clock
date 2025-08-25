@@ -67,7 +67,7 @@ select {
 }
 
 .header a:hover{
-    color:grey;
+    color:#00ffcc;
     transform: scale(1.1);
 }
 

@@ -2,6 +2,7 @@ let timer;         // untuk menyimpan setInterval
 let startTime;     // waktu mulai
 let elapsedTime = 0; 
 let running = false;
+let updateTime,difference = 0,tInterval;
 
 function updateDisplay() {
   let time = Date.now() - startTime + elapsedTime;
@@ -37,4 +38,15 @@ function reset() {
   clearInterval(timer);
   elapsedTime = 0;
   document.getElementById("display").textContent = "00:00:00";
+  // hapus semua lap
+  document.getElementById("laps").innerHTML = "";
+}
+
+function lap(){
+  if (running){
+    const laps = document.getElementById("laps");
+    const li = document.createElement("li");
+    li.textContent = document.getElementById("display").textContent;
+    laps.appendChild(li);
+  }
 }
