@@ -45,8 +45,16 @@ function reset() {
 function lap(){
   if (running){
     const laps = document.getElementById("laps");
+    // bikin element baru
     const li = document.createElement("li");
     li.textContent = document.getElementById("display").textContent;
-    laps.appendChild(li);
+    
+    if (laps.children.length<5){
+      laps.appendChild(li);
+    }else{
+      laps.removeChild(laps.firstElementChild)
+      laps.appendChild(li);
+    }
+
   }
 }

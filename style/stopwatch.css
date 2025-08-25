@@ -150,6 +150,7 @@ body{
   text-align: center;
   font-size: 1.2em;
   margin-bottom: 10px;
+  color:white
 }
 
 .laps-container ol {
@@ -172,6 +173,8 @@ body{
 .laps-container li:hover {
   transform: scale(1.03);          /* efek kalau hover */
 }
+
+
 
 
 
