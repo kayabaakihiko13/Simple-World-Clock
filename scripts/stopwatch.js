@@ -2,7 +2,7 @@ let timer;         // untuk menyimpan setInterval
 let startTime;     // waktu mulai
 let elapsedTime = 0; 
 let running = false;
-let updateTime,difference = 0,tInterval;
+let lapIndex = 0;
 
 function updateDisplay() {
   let time = Date.now() - startTime + elapsedTime;
@@ -40,21 +40,29 @@ function reset() {
   document.getElementById("display").textContent = "00:00:00";
   // hapus semua lap
   document.getElementById("laps").innerHTML = "";
+  lapIndex = 0;
 }
 
-function lap(){
-  if (running){
+
+let lapCount = 0;
+
+function lap() {
+  if (running) {
     const laps = document.getElementById("laps");
-    // bikin element baru
-    const li = document.createElement("li");
-    li.textContent = document.getElementById("display").textContent;
-    
-    if (laps.children.length<5){
+    const currentTime = document.getElementById("display").textContent;
+
+    lapCount++;
+
+    if (laps.children.length < 5) {
+      const li = document.createElement("li");
+      li.textContent = `${lapCount}. ${currentTime}`;
       laps.appendChild(li);
-    }else{
-      laps.removeChild(laps.firstElementChild)
-      laps.appendChild(li);
+    } else {
+      laps.children[lapIndex].textContent = `${lapCount}. ${currentTime}`;
     }
 
+    lapIndex = (lapIndex + 1) % 5;
   }
 }
+
+
