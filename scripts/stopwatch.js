@@ -43,7 +43,6 @@ function reset() {
   lapIndex = 0;
 }
 
-
 let lapCount = 0;
 
 function lap() {
